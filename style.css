@@ -1,0 +1,110 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+.h1,
+.h3{
+  font-size: clamp(var(--min-fs-rem), var(--min-fs-rem) + var(--slope), var(--max-fs-rem));
+  font-family: "Roboto", sans-serif;
+  line-height: 1.25;
+  margin-bottom: 1rem;
+}
+
+.h1{
+  --min-fs: 1.5;
+  --max-fs: 4.5;
+  --min-vw: 20;
+  --max-vw: 45;
+  --min-lh: var(--min-fs) * 1.25;
+  --max-lh: var(--max-fs) * 1.25;
+  --min-fs-rem: var(--min-fs) * 1rem;
+  --max-fs-rem: var(--max-fs) * 1rem;
+  --min-vw-rem: var(--min-vw) * 1rem;
+  --min-lh-rem: var(--min-lh) * 1rem;
+  --max-lh-rem: var(--max-lh) * 1rem;
+  --slope: (var(--max-fs) - var(--min-fs)) * (100vw - var(--min-vw-rem)) / (var(--max-vw) - var(--min-vw));
+  font-weight: 700;
+}
+.h3{
+  --min-fs: 1;
+  --max-fs: 1.5;
+  --min-lh: var(--min-fs) * 1.25;
+  --max-lh: var(--max-fs) * 1.25;
+  --min-vw: 20;
+  --max-vw: 45;
+  --min-lh-rem: var(--min-lh) * 1rem;
+  --max-lh-rem: var(--max-lh) * 1rem;
+  --min-fs-rem: var(--min-fs) * 1rem;
+  --max-fs-rem: var(--max-fs) * 1rem;
+  --min-vw-rem: var(--min-vw) * 1rem;
+  --slope: (var(--max-fs) - var(--min-fs)) * (100vw - var(--min-vw-rem)) / (var(--max-vw) - var(--min-vw));
+}
+
+
+
+body{
+  height: calc(100vh - calc(100vh - 100%));
+  min-height: calc(100vh - calc(100vh - 100%));
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-block-start: 15vh;
+  text-align: center;
+}
+
+
+
+.logo{
+  min-width: 15vh;
+  max-width: 20vw;
+  margin-bottom: 4rem;
+}
+.logo svg {
+  width: 100%;
+  height: auto;
+}
